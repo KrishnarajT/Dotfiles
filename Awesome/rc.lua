@@ -195,7 +195,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -530,21 +530,44 @@ awful.rules.rules = {
       }, properties = { titlebars_enabled = true }
     },
 
-    -- Set Firefox to always map on the tag named "2" on screen 1.
+    -- Set Apps to open on a specific tag, that is the workspace it is supposed to go in
+    -- The below things are the settings for the time when I have dual monitors. Upon removing the other
+    -- monitor, these things become useless.
+    --
+    -- ## DUAL MONITOR SETUP RULES
+    -- { rule = { class = "Brave" },
+    --   properties = { screen = 1, tag = "2" } },
+    -- { rule = { class = "Spotify" },
+    --    properties = { screen = 2, tag = "9" } },
+    -- { rule = { class = "Nautilus" },
+    --    properties = { screen = 1, tag = "3" } },
+    -- { rule = { class = "Teams" },
+    --    properties = { screen = 2, tag = "5" } },
+    -- { rule = { class = "Rambox" },
+    --    properties = { screen = 2, tag = "8" } },
+    -- { rule = { class = "Firefox" },
+    --   properties = { screen = 2, tag = "7" } },
+    -- { rule = { class = "bluema-manager" },
+    --   properties = { screen = 2, tag = "7" } },
+
+    -- ## SINGLE MONITOR RULES  
+    
     { rule = { class = "Brave" },
       properties = { screen = 1, tag = "2" } },
     { rule = { class = "Spotify" },
-       properties = { screen = 2, tag = "9" } },
+       properties = { screen = 1, tag = "9" } },
     { rule = { class = "Nautilus" },
        properties = { screen = 1, tag = "3" } },
     { rule = { class = "Teams" },
-       properties = { screen = 2, tag = "5" } },
+       properties = { screen = 1, tag = "6" } },
     { rule = { class = "Rambox" },
-       properties = { screen = 2, tag = "8" } },
+       properties = { screen = 1, tag = "8" } },
     { rule = { class = "Firefox" },
-      properties = { screen = 2, tag = "7" } },
+      properties = { screen = 1, tag = "7" } },
     { rule = { class = "bluema-manager" },
-      properties = { screen = 2, tag = "7" } },
+      properties = { screen = 1, tag = "1" } },
+	
+
 }
 -- }}}
 
