@@ -1,28 +1,25 @@
 # Window customizations
 window:
-
   dimensions:
     columns: 140
     lines: 38
   padding:
     x: 15
     y: 15
-  decorations: none
-  
-  
-scrolling:
+  decorations: full
 
+scrolling:
   history: 10000
   multiplier: 3
-  
-background_opacity: 0.90
+
+background_opacity: 0.80
 
 # Font configuration
 font:
   # Normal (roman) font face
   normal:
     family: Fantasque Sans Mono
-    style: Regular
+    style: Italic
   bold:
     family: Fantasque Sans Mono
     style: Bold
@@ -34,47 +31,108 @@ font:
     x: 0
     y: 0
 
-
 #### Themes ####
 
 # The color theme thing starts here and so if you wanna paste then rememeber to paste it within these blocks
 # Colors (Darktooth)
 
+# This is a good working theme.
+
+# colors:
+#   primary:
+#     background: '#222324'
+#     foreground: '#9E71D4'
+#     # other possible colors are these
+#     #BABABA
+#     # brighter purple
+#     #9E71D4
+#     # darker purple
+#     #835DAF
+#   # Normal colors
+#   normal:
+#     black:    '#000000'
+#     red:      '#E8341C'
+#     green:    '#68C256'
+#     yellow:   '#F2D42C'
+#     blue:     '#1C98E8'
+#     magenta:  '#8E69C9'
+#     cyan:     '#1C98E8'
+#     white:    '#BABABA'
+
+#   # Bright colors
+#   bright:
+#     black:    '#666666'
+#     red:      '#E05A4F'
+#     green:    '#77B869'
+#     yellow:   '#EFD64B'
+#     blue:     '#387CD3'
+#     magenta:  '#957BBE'
+#     cyan:     '#3D97E2'
+#     white:    '#BABABA'
+
+# Here is ashes.dark but a little customized from terminal.sexy
+
 colors:
+  # Default colors
   primary:
-    background: '#222324'
-    foreground: '#9E71D4'
-    # other possible colors are these
-    #BABABA
-    # brighter purple
-    #9E71D4
-    # darker purple
-    #835DAF
+    background: '0x222324'
+    foreground: '#D7A675'
+
   # Normal colors
   normal:
-    black:    '#000000'
-    red:      '#E8341C'
-    green:    '#68C256'
-    yellow:   '#F2D42C'
-    blue:     '#1C98E8'
-    magenta:  '#8E69C9'
-    cyan:     '#1C98E8'
-    white:    '#BABABA'
+    black: '0x1c2023'
+    red: '0xc7ae95'
+    green: '0x95c7ae'
+    yellow: '0xaec795'
+    blue: '0xae95c7'
+    magenta: '0xc795ae'
+    cyan: '0x95aec7'
+    white: '0xc7ccd1'
 
   # Bright colors
   bright:
-    black:    '#666666'
-    red:      '#E05A4F'
-    green:    '#77B869'
-    yellow:   '#EFD64B'
-    blue:     '#387CD3'
-    magenta:  '#957BBE'
-    cyan:     '#3D97E2'
-    white:    '#BABABA'
+    black: '0x747c84'
+    red: '0xc7ae95'
+    green: '0x95c7ae'
+    yellow: '0xaec795'
+    blue: '0xae95c7'
+    magenta: '0xc795ae'
+    cyan: '0x95aec7'
+    white: '0xf3f4f5'
+
+# this is ocean dark also from terminal.sexy
+
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x2b303b'
+#     foreground: '0xb2c8f0'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x2b303b'
+#     red:     '0xbf616a'
+#     green:   '0xa3be8c'
+#     yellow:  '0xebcb8b'
+#     blue:    '0x8fa1b3'
+#     magenta: '0xb48ead'
+#     cyan:    '0x96b5b4'
+#     white:   '0xc0c5ce'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x65737e'
+#     red:     '0xbf616a'
+#     green:   '0xa3be8c'
+#     yellow:  '0xebcb8b'
+#     blue:    '0x8fa1b3'
+#     magenta: '0xb48ead'
+#     cyan:    '0x96b5b4'
+#     white:   '0xeff1f5'
+
 # the color thing ends here so if you wanna paste remember not to go over this point here
 
 #### Themes ####
-
 
 # Bell
 #
@@ -117,14 +175,12 @@ bell:
   #
   #command: None
 
-
-
 #selection:
-  # This string contains all characters that are used as separators for "semantic words" in Alacritty.
-  #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+# This string contains all characters that are used as separators for "semantic words" in Alacritty.
+#semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
-  # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+# When set to `true`, selected text will be copied to the primary clipboard.
+#save_to_clipboard: false
 
 cursor:
   # Cursor style
@@ -141,7 +197,7 @@ cursor:
   # the style of the active value of the normal cursor.
   #
   # See `cursor.style` for available options.
-  #vi_mode_style: None
+  vi_mode_style: Beam
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -188,28 +244,28 @@ live_config_reload: true
 #alt_send_esc: true
 
 #mouse:
-  # Click settings
+# Click settings
+#
+# The `double_click` and `triple_click` settings control the time
+# alacritty should wait for accepting multiple clicks as one double
+# or triple click.
+#double_click: { threshold: 300 }
+#triple_click: { threshold: 300 }
+
+# If this is `true`, the cursor is temporarily hidden when typing.
+#hide_when_typing: false
+
+url:
+  # URL launcher
   #
-  # The `double_click` and `triple_click` settings control the time
-  # alacritty should wait for accepting multiple clicks as one double
-  # or triple click.
-  #double_click: { threshold: 300 }
-  #triple_click: { threshold: 300 }
-
-  # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing: false
-
-  #url:
-    # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    #
-    # When set to `launcher: None`, URL launching will be disabled completely.
-    #
-    # Default:
+  # This program is executed when clicking on a text which is recognized as a URL.
+  # The URL is always added to the command as the last parameter.
+  #
+  # When set to `launcher: None`, URL launching will be disabled completely.
+  #
+  Default:
     #   - (macOS) open
-    #   - (Linux/BSD) xdg-open
+    - (Linux/BSD) xdg-open
     #   - (Windows) explorer
     #launcher:
     #  program: xdg-open
@@ -487,9 +543,9 @@ key_bindings:
   #- { key: N,      mods: Shift,         mode: Vi, action: SearchPrevious          }
 
   # (Windows, Linux, and BSD only)
-  - { key: V,        mods: Control,           action: Paste            }
-  - { key: C,        mods: Control,           action: Copy             }
-  - { key: F,        mods: Control,           action: SearchForward    }
+  - { key: V, mods: Control, action: Paste }
+  #- { key: C,        mods: Control,           action: Copy             }
+  - { key: F, mods: Control, action: SearchForward }
   #- { key: B,        mods: Control|Shift,           action: SearchBackward   }
   #- { key: C,        mods: Control|Shift, mode: Vi, action: ClearSelection   }
   #- { key: Insert,   mods: Shift,                   action: PasteSelection   }
@@ -499,22 +555,22 @@ key_bindings:
   #- { key: Subtract, mods: Control,                 action: DecreaseFontSize }
   #- { key: Minus,    mods: Control,                 action: DecreaseFontSize }
 #debug:
-  # Display the time it takes to redraw each frame.
-  #render_timer: false
+# Display the time it takes to redraw each frame.
+#render_timer: false
 
-  # Keep the log file after quitting Alacritty.
-  #persistent_logging: false
+# Keep the log file after quitting Alacritty.
+#persistent_logging: false
 
-  # Log level
-  #
-  # Values for `log_level`:
-  #   - None
-  #   - Error
-  #   - Warn
-  #   - Info
-  #   - Debug
-  #   - Trace
-  #log_level: Warn
+# Log level
+#
+# Values for `log_level`:
+#   - None
+#   - Error
+#   - Warn
+#   - Info
+#   - Debug
+#   - Trace
+#log_level: Warn
 
-  # Print all received window events.
-  #print_events: false
+# Print all received window events.
+#print_events: false
